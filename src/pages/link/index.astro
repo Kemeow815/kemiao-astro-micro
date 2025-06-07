@@ -3,7 +3,6 @@
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 
-// 友链数据示例
 const friends = [
   {
     name: "我的博客",
@@ -50,7 +49,8 @@ const friends = [
         <!-- 我的友链信息 -->
         <div class="prose dark:prose-invert">
           <h2>我的信息</h2>
-          <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
+          <!-- 调整此处：添加 text-gray-800 dark:text-gray-300 类 -->
+          <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto text-gray-800 dark:text-gray-300">
 {`名称: 我的博客
 介绍: 分享技术教程与开发经验
 链接: https://example.com
