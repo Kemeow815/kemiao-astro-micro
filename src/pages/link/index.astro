@@ -1,0 +1,104 @@
+---
+// src/pages/links/index.astro
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+
+// 友链数据示例
+const friends = [
+  {
+    name: "我的博客",
+    description: "分享技术教程与开发经验",
+    url: "https://example.com",
+    avatar: "https://example.com/avatar.png"
+  },
+  {
+    name: "小明的小站",
+    description: "前端开发与设计思考",
+    url: "https://xiaoming.dev",
+    avatar: "https://xiaoming.dev/avatar.jpg"
+  },
+  {
+    name: "技术咖啡馆",
+    description: "后端技术与系统架构",
+    url: "https://tech-cafe.io",
+    avatar: "https://tech-cafe.io/logo.png"
+  },
+  {
+    name: "UI实验室",
+    description: "交互设计与用户体验",
+    url: "https://uilab.design",
+    avatar: "https://uilab.design/avatar.webp"
+  }
+];
+---
+<Layout title="友情链接" description="与优秀创作者互链交流">
+  <Container>
+    <div class="animate space-y-10">
+      <div class="space-y-6">
+        <h1 class="text-3xl font-semibold text-black dark:text-white">友情链接</h1>
+        
+        <!-- 申请条件 -->
+        <div class="prose dark:prose-invert">
+          <h2>申请条件</h2>
+          <ul>
+            <li>网站内容合法合规</li>
+            <li>保持周期性内容更新</li>
+            <li>至少半年内保持可访问状态</li>
+          </ul>
+        </div>
+        
+        <!-- 我的友链信息 -->
+        <div class="prose dark:prose-invert">
+          <h2>我的信息</h2>
+          <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto">
+{`名称: 我的博客
+介绍: 分享技术教程与开发经验
+链接: https://example.com
+头像: https://example.com/avatar.png`}</pre>
+        </div>
+      </div>
+
+      <!-- 友链展示 -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {friends.map(friend => (
+          <a 
+            href={friend.url} 
+            target="_blank"
+            rel="noopener noreferrer"
+            class="animate border border-gray-200 dark:border-gray-700 rounded-lg p-4 hover:shadow-md transition-all flex items-start gap-4"
+          >
+            <img 
+              src={friend.avatar} 
+              alt={friend.name}
+              class="w-16 h-16 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600"
+              width="64"
+              height="64"
+            />
+            <div>
+              <h3 class="text-xl font-semibold text-black dark:text-white">
+                {friend.name}
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 mt-1">
+                {friend.description}
+              </p>
+              <div class="text-sm text-blue-500 dark:text-blue-400 mt-2">
+                {new URL(friend.url).hostname}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <!-- 申请按钮 -->
+      <div class="pt-6">
+        <a
+          href="mailto:kemiaofriends@163.com?subject=友链申请"
+          target="_blank"
+          class="animate inline-block px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors font-medium"
+        >
+          申请友链
+        </a>
+      </div>
+    </div>
+  </Container>
+</Layout>
