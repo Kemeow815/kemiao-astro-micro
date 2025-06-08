@@ -8,6 +8,15 @@ const currentYear = new Date().getFullYear();
 const startYear = 2024;
 const experienceYears = currentYear - startYear;
 const githubUsername = "Kemeow815"; // 替换为你的 GitHub 用户名
+
+const getStatsURL = (theme = 'light') => {
+  return `https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=${theme === 'dark' ? 'dark' : 'default'}&include_all_commits=true`;
+};
+
+// 根据主题获取活动图 URL
+const getActivityURL = (theme = 'light') => {
+  return `https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=${theme === 'dark' ? 'github-dark' : 'github'}&custom_title=Activity&radius=30&height=300`;
+};
 ---
 <Layout title="关于我" description="了解我的背景、技能和经历">
   <Container>
@@ -117,9 +126,10 @@ const githubUsername = "Kemeow815"; // 替换为你的 GitHub 用户名
             </div>
             <div class="flex justify-center">
               <img 
-                src={`https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=default&include_all_commits=true`} 
+                src={getStatsURL('light')}
+                data-dark-src={getStatsURL('dark')}
                 alt="GitHub Stats" 
-                class="w-full max-w-3xl"
+                class="w-full max-w-3xl light-image"
               />
             </div>
           </div>
@@ -133,9 +143,10 @@ const githubUsername = "Kemeow815"; // 替换为你的 GitHub 用户名
             </div>
             <div class="flex justify-center">
               <img 
-                src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=github-compact&custom_title=Activity&radius=30&height=300`} 
+                src={getActivityURL('light')}
+                data-dark-src={getActivityURL('dark')}
                 alt="Activity"
-                class="w-full max-w-6xl"
+                class="w-full max-w-6xl light-image"
               />
             </div>
           </div>
@@ -215,17 +226,41 @@ const githubUsername = "Kemeow815"; // 替换为你的 GitHub 用户名
       animation: none;
     }
   }
-
-/* 深色模式适配 */
-@media (prefers-color-scheme: dark) {
-  .bg-white {
-    background-color: #1f2937;
+  
+  /* 修仙卡片深色模式适配 */
+  @media (prefers-color-scheme: dark) {
+    img[src*="github-immortality"] {
+      filter: invert(0.9) hue-rotate(180deg) brightness(1.1);
+    }
   }
-  img[src*="github-readme-stats"] {
-    filter: invert(1) hue-rotate(180deg);
-  }
-  img[src*="github-readme-activity-graph"] {
-    filter: invert(1) hue-rotate(180deg);
-  }
-}
 </style>
+
+<script>
+  // 在客户端根据主题切换图片
+  if (typeof window !== 'undefined') {
+    // 检测当前主题
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // 切换 GitHub 统计卡片
+    const statsImages = document.querySelectorAll('img[data-dark-src]');
+    
+    statsImages.forEach(img => {
+      if (isDarkMode && img.dataset.darkSrc) {
+        img.src = img.dataset.darkSrc;
+      }
+    });
+    
+    // 监听主题变化
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+      const isDark = e.matches;
+      
+      statsImages.forEach(img => {
+        if (isDark && img.dataset.darkSrc) {
+          img.src = img.dataset.darkSrc;
+        } else if (!isDark && img.dataset.src) {
+          img.src = img.dataset.src;
+        }
+      });
+    });
+  }
+</script>
