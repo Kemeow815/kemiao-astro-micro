@@ -5,7 +5,7 @@ import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 
 const currentYear = new Date().getFullYear();
-const startYear = 2020;
+const startYear = 2025;
 const experienceYears = currentYear - startYear;
 ---
 <Layout title="关于我" description="了解我的背景、技能和经历">
@@ -14,14 +14,18 @@ const experienceYears = currentYear - startYear;
       <!-- 头部简介 -->
       <div class="flex flex-col md:flex-row gap-10 items-center">
         <div class="flex-shrink-0">
-          <div class="bg-gray-200 border-2 border-dashed rounded-xl w-48 h-48 md:w-56 md:h-56" />
-        </div>
+            <img 
+              src="/images/avatar.jpg"
+              alt="我的头像" 
+              class="rounded-xl w-48 h-48 md:w-56 md:h-56 object-cover border-2 border-gray-200 dark:border-gray-600"
+            />
+          </div>
         <div class="space-y-4">
           <h1 class="text-4xl font-bold text-black dark:text-white">
-            你好，我是<span class="text-blue-600 dark:text-blue-400">小明</span>
+            你好，我是<span class="text-blue-600 dark:text-blue-400">克喵爱吃卤面</span>
           </h1>
           <p class="text-xl text-gray-600 dark:text-gray-300">
-            全栈开发者 & UI/UX 设计师
+            资源分享者 & 博客写作者
           </p>
           <div class="prose dark:prose-invert max-w-none">
             <p>
@@ -193,7 +197,7 @@ const experienceYears = currentYear - startYear;
   </Container>
 </Layout>
 
-<style>
+<style>images
   .prose a {
     color: #3b82f6;
     text-decoration: none;
