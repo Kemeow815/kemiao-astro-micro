@@ -7,6 +7,7 @@ import FormattedDate from "@components/FormattedDate.astro";
 const currentYear = new Date().getFullYear();
 const startYear = 2024;
 const experienceYears = currentYear - startYear;
+const githubUsername = "Kemeow815"; // 替换为你的 GitHub 用户名
 ---
 <Layout title="关于我" description="了解我的背景、技能和经历">
   <Container>
@@ -102,78 +103,58 @@ const experienceYears = currentYear - startYear;
         </div>
       </div>
 
-      <!-- 技能展示 -->
+      <!-- GitHub 贡献图表 -->
       <div class="space-y-10">
         <h2 class="text-3xl font-bold text-black dark:text-white border-b border-gray-200 dark:border-gray-700 pb-2">
-          技术栈
+          GitHub 贡献
         </h2>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- 前端技能 -->
-          <div class="space-y-4">
-            <h3 class="text-xl font-bold text-black dark:text-white flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd" />
-              </svg>
-              前端开发
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              {['React', 'Vue', 'TypeScript', 'Tailwind CSS', 'Astro', 'Next.js'].map((skill) => (
-                <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium">
-                  {skill}
-                </span>
-              ))}
+        <div class="space-y-12">
+          <!-- GitHub 统计卡片 -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg">
+            <div class="text-center mb-4">
+              <h3 class="text-xl font-bold text-black dark:text-white">
+                GitHub 统计
+              </h3>
+            </div>
+            <div class="flex justify-center">
+              <img 
+                src={`https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=default&include_all_commits=true`} 
+                alt="GitHub Stats" 
+                class="w-full max-w-3xl"
+              />
             </div>
           </div>
           
-          <!-- 后端技能 -->
-          <div class="space-y-4">
-            <h3 class="text-xl font-bold text-black dark:text-white flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
-              </svg>
-              后端开发
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              {['Node.js', 'Express', 'GraphQL', 'MongoDB', 'PostgreSQL', 'Firebase'].map((skill) => (
-                <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium">
-                  {skill}
-                </span>
-              ))}
+          <!-- GitHub 活动图 -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg">
+            <div class="text-center mb-4">
+              <h3 class="text-xl font-bold text-black dark:text-white">
+                贡献活动
+              </h3>
+            </div>
+            <div class="flex justify-center">
+              <img 
+                src={`https://github-readme-activity-graph.vercel.app/graph?username=${githubUsername}&theme=github-compact&custom_title=Activity&radius=30&height=300`} 
+                alt="Activity"
+                class="w-full max-w-6xl"
+              />
             </div>
           </div>
           
-          <!-- 设计技能 -->
-          <div class="space-y-4">
-            <h3 class="text-xl font-bold text-black dark:text-white flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" />
-              </svg>
-              设计工具
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              {['Figma', 'Adobe XD', 'Photoshop', 'Illustrator', 'Framer'].map((skill) => (
-                <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium">
-                  {skill}
-                </span>
-              ))}
+          <!-- 修仙系列统计卡片 -->
+          <div class="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg">
+            <div class="text-center mb-4">
+              <h3 class="text-xl font-bold text-black dark:text-white">
+                编程修仙
+              </h3>
             </div>
-          </div>
-          
-          <!-- 其他技能 -->
-          <div class="space-y-4">
-            <h3 class="text-xl font-bold text-black dark:text-white flex items-center gap-2">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-blue-500" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
-              </svg>
-              其他技能
-            </h3>
-            <div class="flex flex-wrap gap-2">
-              {['Git', 'Docker', 'CI/CD', 'AWS', '敏捷开发', '项目领导'].map((skill) => (
-                <span class="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 rounded-full text-sm font-medium">
-                  {skill}
-                </span>
-              ))}
+            <div class="flex justify-center">
+              <img 
+                src={`https://github-immortality.vercel.app/api?username=${githubUsername}`} 
+                alt="修仙系列统计卡片" 
+                class="w-full max-w-2xl"
+              />
             </div>
           </div>
         </div>
@@ -215,7 +196,7 @@ const experienceYears = currentYear - startYear;
   </Container>
 </Layout>
 
-<style>images
+<style>
   .prose a {
     color: #3b82f6;
     text-decoration: none;
@@ -236,4 +217,17 @@ const experienceYears = currentYear - startYear;
       animation: none;
     }
   }
+
+/* 深色模式适配 */
+@media (prefers-color-scheme: dark) {
+  .bg-white {
+    background-color: #1f2937;
+  }
+  img[src*="github-readme-stats"] {
+    filter: invert(1) hue-rotate(180deg);
+  }
+  img[src*="github-readme-activity-graph"] {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
 </style>
