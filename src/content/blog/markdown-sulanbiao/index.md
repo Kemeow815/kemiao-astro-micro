@@ -42,7 +42,7 @@ Markdown 速查表提供了所有 **Markdown**
 | 元素 | Markdown 语法 |
 |:--:|:---|
 | 表格（Table） | `\| Syntax \| Description \|`<br>`\| -----------  \|  -----------  \|`<br>`\| Header  \|  Title  \|`<br>`\| Paragraph \| Text \|` |
-| 代码块（Fenced Code Block） | ```` ``` ````<br>`{`<br>`"firstName": "John",`<br>`"lastName": "Smith",`<br/>`"age": 25`<br>`}`<br>```` ``` ```` |
+| 代码块（Fenced Code Block） | <code>```</code><br /><code>{</code><br /><code>"firstName": "John",</code><br /><code>"lastName": "Smith",</code><br /><code>"age": 25</code><br /><code>}</code><br /><code>```</code>|
 | 脚注（Footnote） | Here’s a sentence with a footnote. `[^1]`<br/>`[^1]`: This is the footnote. |
 | 标题编号（Heading ID） | \### My Great Heading {#custom-id} |
 | 定义列表（Definition List） | term<br/>: definition |
