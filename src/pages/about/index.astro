@@ -5,7 +5,7 @@ import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 
 const currentYear = new Date().getFullYear();
-const startYear = 2025;
+const startYear = 2024;
 const experienceYears = currentYear - startYear;
 ---
 <Layout title="关于我" description="了解我的背景、技能和经历">
@@ -29,11 +29,12 @@ const experienceYears = currentYear - startYear;
           </p>
           <div class="prose dark:prose-invert max-w-none">
             <p>
-              拥有 {experienceYears} 年经验的软件开发工程师，专注于构建高性能、用户友好的 Web 应用。
-              我热爱开源技术，并在业余时间贡献于多个社区项目。
+              拥有 {experienceYears} 年的博客写作记录，于去年11月开始接触博客，在<a href="https://t.me/kemiaofx_me" target="_blank" rel="noopener noreferrer">Telegram频道</a>分享资源，同月开始接触博客，
+              第一款博客是<a href="https://github.com/ccbikai" target="_blank" rel="noopener noreferrer">面条</a>的<a href="https://github.com/ccbikai/BroadcastChannel" target="_blank" rel="noopener noreferrer">BroadcastChannel</a>博客，
+              在那之后部署了各种框架的博客：Hexo、Hugo、Astro等，这个博客就是以Astro框架搭建的。
             </p>
             <p>
-              当我不在编码时，我喜欢摄影、徒步旅行和阅读科幻小说。
+              我在这个博客分享我的生活记录、资源分享和踩坑教程，如果我分享的内容侵犯了您的权益，请通过下面的联系方式联系我删除，感谢。
             </p>
           </div>
         </div>
