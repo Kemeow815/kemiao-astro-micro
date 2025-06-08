@@ -8,8 +8,13 @@ import { SITE } from "@consts";
   <Container>
     <div class="flex flex-wrap justify-between gap-y-2">
       <Link href="/" underline={false}>
-        <div class="font-semibold">
-          {SITE.TITLE}&nbsp;🔬
+        <div class="font-semibold flex items-center gap-2">
+          {SITE.TITLE}
+          <img 
+            src="/images/avatar.jpg" 
+            alt="Microscope Icon" 
+            class="h-5 w-auto"
+          />
         </div>
       </Link>
       <nav class="flex items-center gap-1 text-sm">
