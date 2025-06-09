@@ -37,4 +37,8 @@ export const SOCIALS: Socials = [
     NAME: "Website",
     HREF: "https://blog-v5.kemiaosw.top",
   },
+  {
+    NAME: "Telegram",
+    HREF: "https://t.me/KemiaoJun",
+  },
 ];
