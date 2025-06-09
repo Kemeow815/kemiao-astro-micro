@@ -6,17 +6,17 @@ demoURL: "https://music.kemiao.online"
 repoURL: "https://github.com/Kemeow815/HeoMusic"
 ---
 
-# HeoMusic
+## HeoMusic
 
 ![](/img/HeoMusic3.webp)
 
 一个基于[Aplayer](https://github.com/DIYgod/APlayer)和[MetingJS](https://github.com/metowolf/MetingJS)的静态音乐播放器
 
-## 预览
+### 预览
 
 [HeoMusic - 用音乐感染人心](https://music.zhheo.com/)
 
-## 基本操作
+### 基本操作
 
 `Space空格键`：暂停/播放音乐
 
@@ -24,9 +24,9 @@ repoURL: "https://github.com/Kemeow815/HeoMusic"
 
 `左/右方向键`：上一曲/下一曲
 
-## 修改歌单/私有部署与配置
+### 修改歌单/私有部署与配置
 
-### 使用URL参数（推荐）（适用于在线音乐）
+#### 使用URL参数（推荐）（适用于在线音乐）
 
 HeoMusic支持URL参数 `https://music.zhheo.com/?id=`+ id +`&server=` + server
 
@@ -36,25 +36,25 @@ HeoMusic支持URL参数 `https://music.zhheo.com/?id=`+ id +`&server=` + server
 
 **鸡你太美:** https://music.zhheo.com/?id=2762963245&server=netease
 
-### 修改配置文件（适用于在线音乐和本地音乐）
+#### 修改配置文件（适用于在线音乐和本地音乐）
 
 将`config.js.demo`文件重命名为`config.js`，并修改其中的配置
 
 直接访问首页`index.html`即可
 
-#### ID
+##### ID
 
 播放列表的id，可以从音乐歌单分享的链接中获取，例如`https://y.qq.com/n/ryqq/playlist/8668419170`中，id为`8668419170`
 
-#### Server
+##### Server
 
 播放列表的服务商，例如`netease`（网易云音乐）,`tencent`（腾讯）,`kugou`（酷狗）,`xiami`（小米音乐）,`baidu`（百度音乐）
 
-#### Type（可选）
+##### Type（可选）
 
 播放列表的类型，例如`song`（单曲）, `playlist`（歌单，默认）, `album`（专辑）, `search`（搜索结果）, `artist`（歌手）
 
-#### localMusic（可选）
+##### localMusic（可选）
 
 本地音乐/外链音乐。如果填写了本地音乐，则优先使用本地音乐。
 
@@ -78,7 +78,7 @@ HeoMusic支持URL参数 `https://music.zhheo.com/?id=`+ id +`&server=` + server
   ];
 ```
 
-#### remoteMusic（可选）
+##### remoteMusic（可选）
 
 使用json格式的链接来进行读取localMusic，会覆盖localMusic的设置。
 
@@ -109,7 +109,7 @@ musicjson内容例如：
 ]
 ```
 
-## 参与开发
+### 参与开发
 
 [@张洪Heo](https://github.com/zhheo)
 [@anzhiyu](https://github.com/anzhiyu-c)
@@ -117,7 +117,7 @@ musicjson内容例如：
 [@kuole-o](https://github.com/kuole-o)
 [查看更多](https://github.com/zhheo/HeoMusic/graphs/contributors)
 
-## 许可
+### 许可
 
 项目中包含已经过修改的 MIT 协议项目
 
@@ -133,8 +133,9 @@ musicjson内容例如：
 
 图标采用remixicon，使用 Apache 协议
 
-## 打赏
+### 打赏
 
 如果你喜欢这个项目，不妨支持一下作者，让作者更有动力更新！
 
 [去打赏作者](https://rewards.zhheo.com/)
+[手头宽裕的也帮帮我吧](https://donate.kemeow.top/)
