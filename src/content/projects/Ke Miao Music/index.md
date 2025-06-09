@@ -8,7 +8,7 @@ repoURL: "https://github.com/Kemeow815/HeoMusic"
 
 ## HeoMusic
 
-![](/img/HeoMusic3.webp)
+![](https://s2.loli.net/2025/06/09/OByxXNrKYuq3FIL.webp)
 
 一个基于[Aplayer](https://github.com/DIYgod/APlayer)和[MetingJS](https://github.com/metowolf/MetingJS)的静态音乐播放器
 
